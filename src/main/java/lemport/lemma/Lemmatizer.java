@@ -34,7 +34,7 @@ import lemport.replacement.Replacement;
  */
 public class Lemmatizer {
   private static final String DEFAULT_PROP =
-      "resources/config/lemport.properties";
+      "config/lemport.properties";
 
   /**
    * This field...
