@@ -1,4 +1,4 @@
-package rank;
+package lemport.rank;
 
 import java.io.BufferedReader;
 import java.io.IOException;

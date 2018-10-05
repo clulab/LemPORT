@@ -1,4 +1,4 @@
-package dictionary;
+package lemport.dictionary;
 
 /**
  * This class ...

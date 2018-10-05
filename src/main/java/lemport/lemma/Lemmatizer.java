@@ -1,4 +1,4 @@
-package lemma;
+package lemport.lemma;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,23 +8,23 @@ import java.util.Properties;
 
 import javax.xml.parsers.ParserConfigurationException;
 
-import lexicon.Lexicon;
-import normalization.AdverbNormalizer;
-import normalization.AugmentativeNormalizer;
-import normalization.DiminutiveNormalizer;
-import normalization.GenderNameNormalizer;
-import normalization.GenderNormalizer;
-import normalization.NumberNormalizer;
-import normalization.SuperlativeNormalizer;
-import normalization.VerbNormalizer;
+import lemport.lexicon.Lexicon;
+import lemport.normalization.AdverbNormalizer;
+import lemport.normalization.AugmentativeNormalizer;
+import lemport.normalization.DiminutiveNormalizer;
+import lemport.normalization.GenderNameNormalizer;
+import lemport.normalization.GenderNormalizer;
+import lemport.normalization.NumberNormalizer;
+import lemport.normalization.SuperlativeNormalizer;
+import lemport.normalization.VerbNormalizer;
 
 import org.xml.sax.SAXException;
 
-import dictionary.Dictionary;
-import dictionary.DictionaryLoadException;
-import rank.WordRanking;
-import rank.WordRankingLoadException;
-import replacement.Replacement;
+import lemport.dictionary.Dictionary;
+import lemport.dictionary.DictionaryLoadException;
+import lemport.rank.WordRanking;
+import lemport.rank.WordRankingLoadException;
+import lemport.replacement.Replacement;
 
 /**
  * This class ...
@@ -34,7 +34,7 @@ import replacement.Replacement;
  */
 public class Lemmatizer {
   private static final String DEFAULT_PROP =
-      "resources/config/lemport.properties";
+      "config/lemport.properties";
 
   /**
    * This field...
@@ -498,6 +498,8 @@ public class Lemmatizer {
   public String lemmatize(String token, String tag) {
     // normalize token/lemma
     String lemma = token.toLowerCase();
+    // map UD tags to palavras tags
+    tag = Replacement.fromPalavrasToUDTagset(tag, token);
     // check for token|tag in cache
     LemmatizerCacheKey key = new LemmatizerCacheKey(lemma, tag.toLowerCase());
     if (cache.containsKey(key)) {

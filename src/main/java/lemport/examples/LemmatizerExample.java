@@ -1,4 +1,4 @@
-package examples;
+package lemport.examples;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -8,10 +8,10 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
 
-import rank.WordRankingLoadException;
-import dictionary.DictionaryLoadException;
-import lemma.LemmatizeException;
-import lemma.Lemmatizer;
+import lemport.rank.WordRankingLoadException;
+import lemport.dictionary.DictionaryLoadException;
+import lemport.lemma.LemmatizeException;
+import lemport.lemma.Lemmatizer;
 
 public class LemmatizerExample {
 
@@ -20,8 +20,8 @@ public class LemmatizerExample {
     Lemmatizer lemmatizer = null;
     String[] tokens = {"Era", "uma", "vez", "um", "gato", "maltês", ",",
         "tocava", "piano", "e", "falava", "francês", "."};
-    String[] tags = {"v-fin", "art", "n", "art", "n", "adj", "punc", "v-fin",
-        "n", "conj-c", "v-fin", "n", "punc"};
+    String[] tags = {"VERBF", "pron-det", "NOUN", "DET", "NOUN", "ADJ", "PUNCT", "VERBF",
+        "NOUN", "CCONJ", "VERBF", "NOUN", "PUNCT"};
     String[] lemmas = null;
 
     try {

@@ -1,4 +1,4 @@
-package lemma;
+package lemport.lemma;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

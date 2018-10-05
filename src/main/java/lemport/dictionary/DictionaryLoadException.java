@@ -1,4 +1,4 @@
-package lexicon;
+package lemport.dictionary;
 
 /**
  * This class ...
@@ -6,14 +6,14 @@ package lexicon;
  * @author   Ricardo Rodrigues
  * @version  0.9.9
  */
-public class LexiconLoadException extends Exception{
+public class DictionaryLoadException extends Exception{
   private static final long serialVersionUID = 1L;
 
   /**
    * Creates a new ...
    * 
    */
-  public LexiconLoadException() {
+  public DictionaryLoadException() {
     super();
   }
 
@@ -22,7 +22,7 @@ public class LexiconLoadException extends Exception{
    * 
    * @param  message ...
    */
-  public LexiconLoadException(String message) {
+  public DictionaryLoadException(String message) {
     super(message);
   }
 }

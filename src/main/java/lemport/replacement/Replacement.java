@@ -1,9 +1,11 @@
-package replacement;
+package lemport.replacement;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -353,5 +355,37 @@ public class Replacement implements Comparable<Replacement> {
       normalizedLength -= matcher.group().trim().length() - 1;
     }
     return normalizedLength;
+  }
+
+  public static String fromPalavrasToUDTagset(String tag, String token){
+    Map<String, String> conversionTable = new HashMap<String, String>();
+    // convert articles to articles
+    conversionTable.put("X", "?");
+    conversionTable.put("ADJ", "adj");
+    conversionTable.put("ADV", "adv");
+    conversionTable.put("SCONJ", "conj-s");
+    conversionTable.put("CCONJ", "conj-c");
+    conversionTable.put("PART", "ec");
+    conversionTable.put("INTJ", "in");
+    conversionTable.put("NOUN", "n");
+    conversionTable.put("NUM", "num");
+    conversionTable.put("ADV", "pp");
+    conversionTable.put("DET", "pron-det");
+    conversionTable.put("PRON", "pron");
+    conversionTable.put("PROPN", "prop");
+    conversionTable.put("ADP", "prp");
+    conversionTable.put("PUNCT", "punc");
+    conversionTable.put("VERBF", "v-fin");
+    conversionTable.put("VERBG", "v-ger");
+    conversionTable.put("VERBI", "v-inf");
+    conversionTable.put("VERBP", "v-pcp");
+    conversionTable.put("AUX", "v");
+
+    String newTag = conversionTable.get(tag);
+    if (newTag != null) {
+        return newTag;
+    } else {
+        return tag;
+    }
   }
 }
