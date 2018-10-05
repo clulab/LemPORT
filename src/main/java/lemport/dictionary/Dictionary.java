@@ -1,4 +1,4 @@
-package dictionary;
+package lemport.dictionary;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 
-import lexicon.Lexicon;
+import lemport.lexicon.Lexicon;
 
 /**
  * This class ...

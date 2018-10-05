@@ -1,4 +1,4 @@
-package lexicon;
+package lemport.lexicon;
 
 import java.io.BufferedReader;
 import java.io.IOException;

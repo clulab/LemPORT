@@ -1,4 +1,4 @@
-package rank;
+package lemport.lexicon;
 
 /**
  * This class ...
@@ -6,14 +6,14 @@ package rank;
  * @author   Ricardo Rodrigues
  * @version  0.9.9
  */
-public class WordRankingLoadException extends Exception{
+public class LexiconLoadException extends Exception{
   private static final long serialVersionUID = 1L;
 
   /**
    * Creates a new ...
    * 
    */
-  public WordRankingLoadException() {
+  public LexiconLoadException() {
     super();
   }
 
@@ -22,7 +22,7 @@ public class WordRankingLoadException extends Exception{
    * 
    * @param  message ...
    */
-  public WordRankingLoadException(String message) {
+  public LexiconLoadException(String message) {
     super(message);
   }
 }

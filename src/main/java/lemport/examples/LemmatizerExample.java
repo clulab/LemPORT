@@ -1,4 +1,4 @@
-package examples;
+package lemport.examples;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -8,10 +8,10 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
 
-import rank.WordRankingLoadException;
-import dictionary.DictionaryLoadException;
-import lemma.LemmatizeException;
-import lemma.Lemmatizer;
+import lemport.rank.WordRankingLoadException;
+import lemport.dictionary.DictionaryLoadException;
+import lemport.lemma.LemmatizeException;
+import lemport.lemma.Lemmatizer;
 
 public class LemmatizerExample {
 

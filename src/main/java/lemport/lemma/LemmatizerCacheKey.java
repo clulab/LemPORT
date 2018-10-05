@@ -1,4 +1,4 @@
-package lemma;
+package lemport.lemma;
 
 /**
  * This class ...

@@ -1,4 +1,4 @@
-package normalization;
+package lemport.normalization;
 
 /**
  * This class ...

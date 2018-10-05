@@ -1,9 +1,9 @@
-package normalization;
+package lemport.normalization;
 
 import java.util.Arrays;
 import java.util.regex.Pattern;
 
-import replacement.Replacement;
+import lemport.replacement.Replacement;
 
 /**
  * This class ...

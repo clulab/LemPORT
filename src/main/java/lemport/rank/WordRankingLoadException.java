@@ -1,4 +1,4 @@
-package dictionary;
+package lemport.rank;
 
 /**
  * This class ...
@@ -6,14 +6,14 @@ package dictionary;
  * @author   Ricardo Rodrigues
  * @version  0.9.9
  */
-public class DictionaryLoadException extends Exception{
+public class WordRankingLoadException extends Exception{
   private static final long serialVersionUID = 1L;
 
   /**
    * Creates a new ...
    * 
    */
-  public DictionaryLoadException() {
+  public WordRankingLoadException() {
     super();
   }
 
@@ -22,7 +22,7 @@ public class DictionaryLoadException extends Exception{
    * 
    * @param  message ...
    */
-  public DictionaryLoadException(String message) {
+  public WordRankingLoadException(String message) {
     super(message);
   }
 }
