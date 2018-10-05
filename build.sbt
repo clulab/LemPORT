@@ -59,8 +59,13 @@ lazy val commonSettings = Seq(
   //
 )
 
+lazy val assemblySettings = Seq(
+  assemblyJarName in assembly := s"${name.value.toLowerCase}-${version.value}.jar"
+)
+
 lazy val root = (project in file("."))
   .settings(commonSettings: _*)
+  .settings(assemblySettings: _*)
 
 
 // release steps
